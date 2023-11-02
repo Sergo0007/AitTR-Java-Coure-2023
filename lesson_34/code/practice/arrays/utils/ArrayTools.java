@@ -1,5 +1,6 @@
 package practice.arrays.utils;
 
+import java.util.Comparator;
 import java.util.function.Predicate;
 
 public class ArrayTools {
@@ -30,4 +31,36 @@ public class ArrayTools {
         return null;
 
     }
-}
+    public static <T>void  bubbleSort(T[] arr, Comparator<T> comparator){
+        for (int i = 0; i < arr.length - 1 ; i++) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if ( comparator.compare(arr[j],arr[j + 1]) > 0){
+                    T t = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = t;
+
+                    }
+
+                }
+
+            }
+
+        }
+        public static int binarySearch(int[] arr, int num){
+        int left = 0;
+        int right = arr.length - 1;
+        while (left <= right){
+            int mid = (left + right) / 2;
+            if (arr[mid] == num) {
+                return mid;
+            }else if (num < arr[mid]) {
+                right = mid - 1;
+            }else {
+                left = mid + 1;
+            }
+        }
+        return - left - 1;
+
+        }
+
+    }
