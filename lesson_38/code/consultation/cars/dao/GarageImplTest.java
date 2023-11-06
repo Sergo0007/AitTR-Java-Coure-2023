@@ -24,6 +24,7 @@ class GarageImplTest {
             garage.addCar(c[i]);
         }
 
+
     }
 
     @Test

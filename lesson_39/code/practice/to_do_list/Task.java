@@ -75,6 +75,6 @@ public class Task implements Comparable<Task> {
 
     @Override
     public int compareTo(Task o) { //сравниваем текуший обьект с заданным
-        return Integer.compare(this.getTaskNumber(),o.getTaskNumber());
+        return Integer.compare(this.taskNumber,o.taskNumber);
     }
 }

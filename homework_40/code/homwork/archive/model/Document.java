@@ -3,8 +3,8 @@ package homwork.archive.model;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-//1
-public class Documents implements Comparable<Documents>{
+//1 создаем класс Документ
+public class Document implements Comparable<Document>{
     // fields
     private int archiveId;
     private int documentId;
@@ -15,7 +15,7 @@ public class Documents implements Comparable<Documents>{
     //constructor
 
 
-    public Documents(int archiveId, int documentId, String title, String url, LocalDateTime date) {
+    public Document(int archiveId, int documentId, String title, String url, LocalDateTime date) {
         this.archiveId = archiveId;
         this.documentId = documentId;
         this.title = title;
@@ -69,7 +69,7 @@ public class Documents implements Comparable<Documents>{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Documents documents = (Documents) o;
+        Document documents = (Document) o;
         return archiveId == documents.archiveId && documentId == documents.documentId;
     }
 
@@ -79,7 +79,7 @@ public class Documents implements Comparable<Documents>{
     }
 
     @Override
-    public int compareTo(Documents o) {
+    public int compareTo(Document o) {
         //надо определить как сортировать обьекты в массиве по двум полям archiveId, documentId
          int res =Integer.compare(archiveId,o.archiveId);
          return res != 0 ? res : Integer.compare(documentId,o.documentId);
