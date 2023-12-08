@@ -7,6 +7,7 @@ public class CompanyImpl implements Company{
     // поля, которые описывают компанию
     private Employee[] employees; // массив для хранения сотрудников
     private int size; // текущее кол-во сотрудников в компании
+    
 
     // конструктор
     public CompanyImpl(int capacity){
@@ -91,7 +92,7 @@ public class CompanyImpl implements Company{
 
     @Override
     public void printEmployees() {
-        for (int i = 0; i <= size; i++) {
+        for (int i = 0; i < size; i++) {
             System.out.println(employees[i]);
 
 

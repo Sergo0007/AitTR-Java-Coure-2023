@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 //1 создаем класс Документ
-public class Document implements Comparable<Document>{
+public class Document implements Comparable<Document> {
     // fields
     private int archiveId;
     private int documentId;
@@ -81,11 +81,12 @@ public class Document implements Comparable<Document>{
     @Override
     public int compareTo(Document o) {
         //надо определить как сортировать обьекты в массиве по двум полям archiveId, documentId
-         int res =Integer.compare(archiveId,o.archiveId);
-         return res != 0 ? res : Integer.compare(documentId,o.documentId);
+        int res = Integer.compare(archiveId, o.archiveId);
+        return res != 0 ? res : Integer.compare(documentId, o.documentId);
 
     }
 }
+
 
 
 

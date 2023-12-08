@@ -13,9 +13,9 @@ class LibraryImplTest {
     void setUp() {
         library = new LibraryImpl(5);
         book = new Book[4];
-        book[0] = new Book(978L, "Мирзакаим Норбеков", "Опыт дурака", 2021);
-        book[1] = new Book(789L, " Александр Дюма", "Три мушетера", 1989);
-        book[2] = new Book(890L, "Виктор Сувовров", "Аквариум", 2000);
+        book[0] = new Book(978L, "Мирзакарим Норбеков", "Опыт дурака", 2021);
+        book[1] = new Book(789L, " Александр Дюма", "Три мушкетера", 1989);
+        book[2] = new Book(890L, "Виктор Суворов", "Аквариум", 2000);
 
         //добавим элементы массива в company
         for (int i = 0; i < book.length; i++) {

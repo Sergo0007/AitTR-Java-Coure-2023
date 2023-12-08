@@ -100,12 +100,12 @@ public class ArchiveImpl implements Archive {
     @Override
     public Document[] getDocumentBetweenDate(LocalDate dateFrom, LocalDate dateTo) {
         Document pattern = new Document(0, Integer.MIN_VALUE, null, null, dateFrom.atStartOfDay());//вводим объектную переменную
-        int from = -Arrays.binarySearch(documents,0,size,pattern,comparator) -1;//находим индекс начального документа(левый край)
+        int from = -Arrays.binarySearch(documents, 0, size, pattern, comparator) - 1;//находим индекс начального документа(левый край)
         // from = from >= 0 ? from : -from -1;
-        pattern = new Document(0,Integer.MAX_VALUE,null,null, LocalDateTime.of(dateTo, LocalTime.MAX));//находим индекс конечного документа (правый край)
-        int to = -Arrays.binarySearch(documents,0,size,pattern,comparator) -1;
-       // to = to >= 0 ? to : to -1;
-        return Arrays.copyOfRange(documents,from,to);//Range диапазон создаем новый массив с нужным документом
+        pattern = new Document(0, Integer.MAX_VALUE, null, null, LocalDateTime.of(dateTo, LocalTime.MAX));//находим индекс конечного документа (правый край)
+        int to = -Arrays.binarySearch(documents, 0, size, pattern, comparator) - 1;
+        // to = to >= 0 ? to : to -1;
+        return Arrays.copyOfRange(documents, from, to);//Range диапазон создаем новый массив с нужным документом
     }
 
     @Override

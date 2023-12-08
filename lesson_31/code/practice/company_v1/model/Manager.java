@@ -4,8 +4,9 @@ public class Manager extends Employee {
     private double baseSalary;
     private int grade;
 
-    public Manager(int id, String firstName, String lastName, int age, double hours, double baseSalary, int grade) {
-        super(id, firstName, lastName, age, hours);
+    public Manager(int id, String firstName, String lastName, int age, double hours, double baseSalary,
+                   int grade,int workExperience,String education) {
+        super(id, firstName, lastName, age, hours,workExperience,education);
         this.baseSalary = baseSalary;
         this.grade = grade;
     }

@@ -7,14 +7,20 @@ public abstract class Employee {
     protected String lastName;
     protected int age;
     protected double hours;
+    protected int workExperience;
+    protected String education;
+
 
     // конструктор
-    public Employee(int id, String firstName, String lastName, int age, double hours) {
+    public Employee(int id, String firstName, String lastName, int age, double hours,
+                    int workExperience, String education) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
         this.hours = hours;
+        this.workExperience = workExperience;
+        this.education = education;
     }
 
     public int getId() {
@@ -53,6 +59,22 @@ public abstract class Employee {
         this.hours = hours;
     }
 
+    public int getWorkExperience() {
+        return workExperience;
+    }
+
+    public void setWorkExperience(int workExperience) {
+        this.workExperience = workExperience;
+    }
+
+    public String getEducation() {
+        return education;
+    }
+
+    public void setEducation(String education) {
+        this.education = education;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,6 +95,8 @@ public abstract class Employee {
         sb.append(", firstName='").append(firstName).append('\'');
         sb.append(", lastName='").append(lastName).append('\'');
         sb.append(", hours=").append(hours);
+        sb.append(", workExperience=").append(workExperience);
+        sb.append(", eduction=").append(education).append('\'');
         sb.append(", salary=").append(calcSalary());
         return sb.toString();
     }
