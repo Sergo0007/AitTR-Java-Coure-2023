@@ -2,6 +2,8 @@ package review.dao;
 
 import review.model.Review;
 
+import java.util.List;
+
 public interface Ratings {
 
     boolean add(Review review);
@@ -10,7 +12,7 @@ public interface Ratings {
 
     boolean update(Long id, int newRating);
 
-    Iterable<Review> getReviewsByproduct(String product);
+    Iterable<Review> getReviewsByProduct(String product);
 
     Iterable<Review> getReviewsByAuthor(String author);
 

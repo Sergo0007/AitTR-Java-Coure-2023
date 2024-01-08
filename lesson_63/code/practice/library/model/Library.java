@@ -35,6 +35,12 @@ public class Library {
         readers.get(1).getBooks().add(books.get(4));// Петров взял книгу с индексом 4
         readers.get(2).getBooks().add(books.get(0)); // Сидоров взял Оруэлла
         readers.get(2).getBooks().add(books.get(2)); // Сидоров взял Гессе
+
+
+
+
+
+
     }
 
     public List<Book> getBooks() {

@@ -114,23 +114,27 @@ public class LibAppl {
                 .collect(Collectors.groupingBy(r -> r.getBooks().size() > 2 ? "TOO_MUCH" : "OK",
                         Collectors.mapping(r -> new Email(r.getEmail()), Collectors.toList())));
         System.out.println(map.entrySet());
-        System.out.println("---------------------------");
-        //
+        System.out.println("-------------Check book--------------");
+        //Проверить, взял ли кто-то из читателей библиотеки какие-нибудь книги Л. Толстого.
         boolean check = checkbook(library,"Harper Lee");
         System.out.println(check);
 
-        System.out.println("-----------Groups of Users II-----------");
+//        System.out.println("-----------Groups of Users II-----------");
+//        Map<Integer, String> readersMap = library.getReaders().stream()
+//                .filter(Reader::isSubscriber)
+//                .collect(Collectors.groupingBy(r -> r.getBooks().size(),
+//                       Collectors.mapping(Reader::getFio,joining(", ", "{", "}"))));
+//        System.out.println(readersMap.entrySet());
 
 
+        System.out.println("-------------------- Groups of Users III (from Yurii Koval) ----------------------------");
+        Map<Integer, Reader> mapReader = library.getReaders().stream()
+                .collect(Collectors.toMap(
+                        reader -> reader.getBooks().size(),
+                        reader -> reader
+                ));
 
-
-
-
-
-
-
-
-
+        System.out.println(mapReader.entrySet());
 
 
 
